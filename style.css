@@ -1,0 +1,28 @@
+body {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: slategray;
+    
+  }
+  
+  label {
+    font-weight: bold-italic;
+    font-family:  'Great Vibes', cursive;
+  }
+  
+  a,
+  a:hover {
+    text-decoration: none
+  }
+
+  .font-style {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .absolute-right {
+    right: 15px;
+  }
+
+  .front {
+    z-index: 10;
+  }
