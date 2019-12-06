@@ -1,59 +1,63 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 export default function PageList() {
     return (
-      <div>
+    <div>
   <nav classname="navbar bg-light navbar-light fixed-top">
     <div>
-      <a href="../Website/WebsiteList.html" classname="text-dark">
+     <Link to="/user/:uid/website" classname="text-dark">
         <i classname="fas fa-chevron-left" />
-      </a>
+      </Link>
       <span classname="navbar-brand mb-0 h1 m1-4">Pages</span>
     </div>
-    <a href="PageNew.html" classname="text-dark">
+   <Link to="/user/:uid/website/:wid/page/new" classname="text-dark">
       <i classname="fas fa-plus" />
-    </a>
+    </Link>
   </nav>
   <main classname="container">
     <ul classname="list-group list-group-flush">
       <li classname="list-group-item">
-        <a href="../Widget/WidgetList.html">Help</a>
-        <a href="PageEdit.html" classname="float-right">
+       <Link to="/user/:uid/website/:wid/page/:pid/widget" >Blog Post</Link>
+       <Link to="/user/:uid/website/:wid/page/:pid" classname="float-right">
           <i classname="fas fa-cog" />
-        </a>
+        </Link>
       </li>
       <li classname="list-group-item">
-        <a href="../Widget/WidgetList.html">Follow Us</a>
-        <a href="PageEdit.html" classname="float-right">
+       <Link to="/user/:uid/website/:wid/page/:pid/widget">Blogs</Link>
+       <Link to="/user/:uid/website/:wid/page/:pid" classname="float-right">
           <i classname="fas fa-cog" />
-        </a>
+        </Link>
       </li>
       <li classname="list-group-item">
-        <a href="../Widget/WidgetList.html">Home</a>
-        <a href="PageEdit.html" classname="float-right">
+       <Link to="/user/:uid/website/:wid/page/:pid/widget">Home</Link>
+       <Link to="/user/:uid/website/:wid/page/:pid" classname="float-right">
           <i classname="fas fa-cog" />
-        </a>
+        </Link>
       </li>
       <li classname="list-group-item">
-        <a href="../Widget/WidgetList.html">About</a>
-        <a href="PageEdit.html" classname="float-right">
+       <Link to="/user/:uid/website/:wid/page/:pid/widget">About</Link>
+       <Link to="/user/:uid/website/:wid/page/:pid" classname="float-right">
           <i classname="fas fa-cog" />
-        </a>
+        </Link>
       </li>
       <li classname="list-group-item">
-        <a href="../Widget/WidgetList.html">Contact Us</a>
-        <a href="PageEdit.html" classname="float-right">
-          <i classname="fas fa-cog" />
-        </a></li><a href="PageEdit.html" classname="float-right">
-      </a></ul><a href="PageEdit.html" classname="float-right">
-    </a></main><a href="PageEdit.html" classname="float-right">
-  </a>
-  <footer classname="navbar navbar-light bg-light fixed-bottom"><a href="PageEdit.html" classname="float-right">
+       <Link  to="/user/:uid/website/:wid/page/:pid/widget">
+         Contact Us</Link>
+       <Link 
+         to="/user/:uid/website/:wid/page/:pid" 
+         classname="float-right">
+        <i classname="fas fa-cog" />
+        </Link>
+        </li>
+        </ul>
+      </main>
+      <footer classname="navbar navbar-light bg-light fixed-bottom">
       <span />
-    </a><a href="../User/Profile.html" classname="text-dark">
+    <Link to="/user/:uid" classname="text-dark">
       <i classname="fas fa-user" />
-    </a>
-  </footer></div>
+    </Link>
+  </footer>
+  </div>
 
     )
 }

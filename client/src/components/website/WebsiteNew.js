@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom"
 
 export default function WebsiteNew() {
     return (
@@ -32,8 +32,8 @@ export default function WebsiteNew() {
       </Link>
     </div>
   </nav>
-  <div className="row">
-    <div className="col-lg-3 d-none d-lg-block">
+  <main className="row">
+    <aside className="col-lg-3 d-none d-lg-block">
       <div className="container">
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
@@ -55,29 +55,45 @@ export default function WebsiteNew() {
             </Link>
           </li>
           <li className="list-group-item">
-            <Link to="/user/:uid/website/:wid/page">Script Testing App</Link>
+            <Link to="/user/:uid/website/:wid/page">
+                Script Testing App
+            </Link>
             <Link className="float-right" to="/user/:uid/website/:wid">
               <i className="fas fa-cog" />
             </Link>
           </li>
         </ul>
       </div>
-    </div>
-    <div className="col-lg-9">
+    </aside>
+    <section className="col-lg-9">
       <div className="container">
         <form>
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" placeholder="Enter website name..." id="name" className="form-control" />
+            <input 
+            type="text" 
+            placeholder="Enter website name..." 
+            id="name" 
+            className="form-control" />
           </div>
           <div className="form-group">
             <label htmlFor="description">Description</label>
-            <textarea className="form-control" placeholder="Enter website description..." rows={5} defaultValue={""} />
+            <textarea 
+            className="form-control" 
+            placeholder="Enter website description..." 
+            rows={5} 
+            defaultValue={""} />
+            </div>
+           </form>
           </div>
-        </form>
-      </div>
+        </section>
+      </main>
+      <footer className="navbar navbar-dark bg-primary fixed-bottom">
+          <span />
+      <Link className="text-light" to="/user/:uid">
+      <i className="fas fa-user" />
+      </Link>
+      </footer>
     </div>
-  </div></div>
-
-    )
+    );
 }

@@ -1,18 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function WidgetYoutube() {
     return (
         <div>
              <nav className="navbar navbar-light bg-light fixed-top">
             <div>
-                <a href="WidgetList.html" className="text-dark">
+                <Link 
+                to="/user/:uid/website/:wid/page/:pid/widget/list"  className="text-dark">
                     <i className="fas fa-chevron-left"></i>
-                </a>
+                </Link>
                 <span className="navbar-brand h1 mb-0 ml-4">Edit Widget</span>
             </div>
-            <a href="WidgetList.html" className="text-dark">
+            <Link 
+            to="/user/:uid/website/:wid/page/:pid/widget/list" className="text-dark">
                 <i className="fas fa-check"></i>
-            </a>
+            </Link>
         </nav>
         <main className="container">
             <form>
@@ -58,8 +61,8 @@ export default function WidgetYoutube() {
         </main>
         <footer className="navbar navbar-light fixed-bottom">
             <span></span>
-            <a href="../User/Profile.html" class="text-dark">
-            <i className="fas fa-user"></i></a>
+            <Link to="/user/:uid" class="text-dark">
+            <i className="fas fa-user"></i></Link>
         </footer>
         </div>
     )

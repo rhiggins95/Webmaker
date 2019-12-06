@@ -1,18 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function PageEdit() {
-    return (
+  return (
+    <div>
+      <nav className="navbar navbar-light bg-light fixed-top">
         <div>
-              <nav className="navbar navbar-light bg-light fixed-top">
-<div>
-    <a href="PageList.html"><i className="fas fa-chevron-left"></i></a>
-    <span className="navbar-brand h1 mb-0 m1-4">Check Your Order</span>
-</div>
-<a className="text-dark" href="PageList.html"><i className="fas fa-check"></i>
-    </a>
-</nav>
-<main className="container">
-    <form>
+          <Link to="/user/:uid/website/:wid/page">
+             <i className="fas fa-chevron-left"></i>
+             </Link>
+            <span className="navbar-brand h1 mb-0 m1-4">Edit Page</span>
+            </div>
+            <Link className="text-dark" to="/user/:uid/website/:wid/page">
+            <i className="fas fa-check"></i>
+        </Link>
+        </nav>
+        <main className="container">
+        <form>
         <div className="form-group">
             <label for="name">Name</label>
         <input
@@ -24,17 +28,23 @@ export default function PageEdit() {
         />
     </div>
     <div className="form-group">
-            <label for="title">Tracking number...</label>
+            <label for="title">Title</label>
         <input
         type="text"
         id="title"
         className="form-control"
-        placeholder="Enter tracking # 000-0000"
+        placeholder="Enter page title..."
         />
     </div>
-    <a href="PageList.html" className="btn btn-danger btn-block">Delete</a>
+    <Link to="/user/:uid/website/:wid/page" className="btn btn-danger btn-block">Delete</Link>
     </form>
 </main>
+<footer className="navbar navbar-light bg-light fixed-bottom">
+    <span />
+    <Link to="/user/:uid" className="text-dark">
+    <i className="fas fa-user" />
+    </Link>
+</footer>
         </div>
-    )
+    );
 }

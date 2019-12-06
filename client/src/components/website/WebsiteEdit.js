@@ -1,34 +1,35 @@
-import React from 'react'
+import React from 'react';
+import {Link} from "react-router-dom";
 
 export default function WebsiteEdit() {
-    return (
+ return (
+    <div>
+      <nav classname="navbar navbar-dark bg-primary fixed-top row">
+        {/* Left Navbar */}
+        <div classname="col-lg-3 d-none d-lg-block">
+        <div classname="navbar">
         <div>
-  <nav classname="navbar navbar-dark bg-primary fixed-top row">
-    {/* Left Navbar */}
-    <div classname="col-lg-3 d-none d-lg-block">
-      <div classname="navbar">
-        <div>
-          <a classname="text-light" href="WebsiteList.html">
+          <Link classname="text-light" to="/user/:uid/website">
             <i classname="fas fa-chevron-left" />
-          </a>
+          </Link>
           <span classname="navbar-brand mb-0 h1 ml-4">Websites</span>
         </div>
-        <a classname="text-light" href="WebsiteNew.html">
+        <Link classname="text-light" to="/user/:uid/website/new">
           <i classname="fas fa-plus" />
-        </a>
+        </Link>
       </div>
     </div>
     {/* Right Navbar */}
     <div classname="col-lg-9 navbar">
       <div>
-        <a classname="text-light d-lg-none " href="WebsiteList.html">
+        <Link classname="text-light d-lg-none " to="/user/:uid/website">
           <i classname="fas fa-chevron-left" />
-        </a>
+        </Link>
         <span classname="navbar-brand mb-0 h1 ml-4">Shopping Cart</span>
       </div>
-      <a classname="text-light" href="WebsiteList.html">
+      <Link classname="text-light" to="/user/:uid/website/list">
         <i classname="fas fa-check" />
-      </a>
+      </Link>
     </div>
   </nav>
   <div classname="row">
@@ -36,28 +37,28 @@ export default function WebsiteEdit() {
       <div classname="container">
         <ul classname="list-group list-group-flush font-style">
           <li classname="list-group-item">
-            <a href="../page/PageList.html">Add/Remove Item</a>
-            <a classname="float-right" href="WebsiteEdit.html">
+            <Link to="/user/:uid/website/:wid/page">Address Book App</Link>
+            <Link classname="float-right" to="/user/:uid/website/:wid">
               <i classname="fas fa-cog" />
-            </a>
+            </Link>
           </li>
           <li classname="list-group-item">
-            <a href="../page/PageList.html">Add/Remove Item</a>
-            <a classname="float-right" href="WebsiteEdit.html">
+            <Link to="/user/:uid/website/:wid/page">Blogger</Link>
+            <Link classname="float-right" to="/user/:uid/website/:wid">
               <i classname="fas fa-cog" />
-            </a>
+            </Link>
           </li>
           <li classname="list-group-item">
-            <a href="../page/PageList.html">Add/Remove Item</a>
-            <a classname="float-right" href="WebsiteEdit.html">
+            <Link to="/user/:uid/website/:wid/page">Blogging App</Link>
+            <Link classname="float-right" to="/user/:uid/website/:wid">
               <i classname="fas fa-cog" />
-            </a>
+            </Link>
           </li>
           <li classname="list-group-item">
-            <a href="../page/PageList.html">Add/Remove Item</a>
-            <a classname="float-right" href="WebsiteEdit.html">
+            <Link to="/user/:uid/website/:wid/page">Script Testing App</Link>
+            <Link classname="float-right" to="/user/:uid/website/:wid">
               <i classname="fas fa-cog" />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -67,13 +68,37 @@ export default function WebsiteEdit() {
         <form>
           <div classname="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" placeholder="Enter your name..." id="name" classname="form-control" defaultValue="Blogger" />
+            <input 
+            type="text" 
+            placeholder="Enter your name..." 
+            id="name" 
+            classname="form-control" 
+            defaultValue="Blogger" />
           </div>
           <div classname="form-group">
-            <label htmlFor="description">Feedback</label>
-            <textarea classname="form-control" placeholder="Enter your feedback here..." rows={5} defaultValue={""} />
+            <label htmlFor="description">Description</label>
+            <textarea 
+            classname="form-control" 
+            placeholder="Enter your feedback here..." 
+            rows={5} 
+            defaultValue={""} 
+            />
           </div>
-        </form></div></div></div></div>
-
-    )
+        <Link 
+        to="/user/:uid/website"
+        className="btn btn-danger btn-block">
+          Delete
+        </Link> 
+        </form>
+        </div>
+        </div>
+        </div>
+        <nav className="navbar navbar-dark bg-primary fixed-bottom">
+          <span/>
+          <Link className="text-light"to="/user/:uid">
+        <i className="fas fa-user" />
+          </Link>
+        </nav>
+        </div>
+    );
 }

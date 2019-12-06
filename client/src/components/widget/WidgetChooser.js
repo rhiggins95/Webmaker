@@ -1,49 +1,50 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function WidgetChooser() {
     return (
         <div>
-  <nav classname="navbar navbar-light bg-light fixed-top">
+  <nav className="navbar navbar-light bg-light fixed-top">
     <div>
-      <a href="WidgetList.html" classname="text-dark">
-        <i classname="fas fa-chevron-left" />
-      </a>
-      <span classname="navbar-brand h1 mb-0 ml-4">Choose Widget</span>
+      <Link to="/user/:uid/website/:wid/page/:pid/widget/list" className="text-dark">
+        <i className="fas fa-chevron-left" />
+      </Link>
+      <span className="navbar-brand h1 mb-0 ml-4">Choose Widget</span>
     </div>
   </nav>
-  <main classname="container">
-    <ul classname="list-group list-group-flush">
-      <li classname="list-group-item">
-        <a href="WidgetHeading.html">Header</a>
+  <main className="container">
+    <ul className="list-group list-group-flush">
+      <li className="list-group-item">
+        <Link to="/user/:uid/website/:wid/page/:pid/widget/edit">Header</Link>
       </li>
-      <li classname="list-group-item">
-        <a href="WidgetLabel.html">Label</a>
+      <li className="list-group-item">
+        <Link href="WidgetLabel.html">Label</Link>
       </li>
-      <li classname="list-group-item">
-        <a href="WidgetTextInput.html">Text Input</a>
+      <li className="list-group-item">
+        <Link href="WidgetTextInput.html">Text Input</Link>
       </li>
-      <li classname="list-group-item">
-        <a href="WidgetLink.html">Link</a>
+      <li className="list-group-item">
+        <Link href="WidgetLink.html">Link</Link>
       </li>
-      <li classname="list-group-item">
-        <a href="WidgetButton.html">Button</a>
+      <li className="list-group-item">
+        <Link href="WidgetButton.html">Button</Link>
       </li>
-      <li classname="list-group-item">
-        <a href="WidgetImage.html">Image</a>
+      <li className="list-group-item">
+        <Link to="/user/:uid/website/:wid/page/:pid/widget/edit">Image</Link>
       </li>
-      <li classname="list-group-item">
-        <a href="WidgetYoutube.html">Youtube</a>
+      <li className="list-group-item">
+        <Link href="WidgetYoutube.html">Youtube</Link>
       </li>
-      <li classname="list-group-item">
-        <a href="WidgetDataTable.html">Data Table</a>
+      <li className="list-group-item">
+        <Link href="WidgetDataTable.html">Data Table</Link>
       </li>
-      <li classname="list-group-item">
-        <a href="WidgetRepeater.html">Repeater</a>
+      <li className="list-group-item">
+        <Link href="WidgetRepeater.html">Repeater</Link>
       </li>
-      <footer classname="navbar navbar-light bg-light fixed-bottom">
+      <footer className="navbar navbar-light bg-light fixed-bottom">
         <span>
-          <a href="../User/Profile.html"><i classname="fas fa-user" /></a><i classname="fas fa-user">
-          </i></span></footer><i classname="fas fa-user">
+          <Link to="/user/:uid"><i className="fas fa-user" /></Link><i className="fas fa-user">
+          </i></span></footer><i className="fas fa-user">
       </i></ul></main></div>
 
     )
