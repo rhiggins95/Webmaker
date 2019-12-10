@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link } from "react-router-dom"
+import { 
+  Link } from "react-router-dom"
 
 export default function WidgetList() {
     return (
@@ -14,7 +15,7 @@ export default function WidgetList() {
       </i></i></nav><i classname="fas fa-chevron-left"><i classname="fas fa-plus">
       <main classname="container-fluid text-center">
         <section>
-          {'{'}/* Icons */{'}'}
+          {/* Icons */}
           <div classname="position-absolute absolute-right p-1 bg-light rounded-left">
             <Link to="/user/:uid/website/:wid/page/:pid/widget/edit">
               <i classname="fas fa-cog">
@@ -24,7 +25,7 @@ export default function WidgetList() {
               <em><h1 classname="text-light font-style">MSIMBO</h1></em>
             </i></i></section><i classname="fas fa-cog"><i classname="fas fa-bars">
             <section>
-              {'{'}/* Icons */{'}'}
+              {/* Icons */}
               <div classname="position-absolute absolute-right p-1 bg-light rounded-left">
                 <Link to="/user/:uid/website/:wid/page/:pid/widget/edit">
                   <i classname="fas fa-cog">
@@ -35,7 +36,7 @@ export default function WidgetList() {
                     </h3></em>
                 </i></i></section><i classname="fas fa-cog"><i classname="fas fa-bars">
                 <section>
-                  {'{'}/* Icons */{'}'}
+                  {/* Icons */}
                   <div classname="position-absolute absolute-right p-1 bg-light rounded-left">
                     <Link to="/user/:uid/website/:wid/page/:pid/widget/edit">
                       <i classname="fas fa-cog">
@@ -50,7 +51,7 @@ export default function WidgetList() {
                       </p>
                     </i></i></section><i classname="fas fa-cog"><i classname="fas fa-bars">
                     <section>
-                      {'{'}/* Icons */{'}'}
+                      {/* Icons */}
                       <div classname="position-absolute absolute-right p-1 bg-light rounded-left">
                         <Link to="/user/:uid/website/:wid/page/:pid/widget/edit">
                           <i classname="fas fa-cog">
@@ -60,7 +61,7 @@ export default function WidgetList() {
                           <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
                         </i></i></section><i classname="fas fa-cog"><i classname="fas fa-bars">
                         <section>
-                          {'{'}/* Icons */{'}'}
+                          {/* Icons */}
                           <div classname="position-absolute absolute-right p-1 rounded-left front bg-light">
                             <Link to="/user/:uid/website/:wid/page/:pid/widget/edit">
                               <i classname="fas fa-cog">
@@ -68,21 +69,20 @@ export default function WidgetList() {
                               <i classname="fas fa-bars">
                               </i></i></div><i classname="fas fa-cog"><i classname="fas fa-bars">
                               <div classname="embed-responsive embed-responsive-16by9">
-                                <iframe src="https://previews.customer.envatousercontent.com/h264-video-previews/0dc8a1f9-2a98-433a-9a79-c03de0665bbf/22087178.mp4" frameBorder="{0}" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowFullScreen>
-                                  </iframe>
+                                <iframe title="Flow"src="https://previews.customer.envatousercontent.com/h264-video-previews/0dc8a1f9-2a98-433a-9a79-c03de0665bbf/22087178.mp4" frameBorder="{0}" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowFullScreen />
                                   </div>
                                   <section></section>
-                                  {'{'}/* Icons */{'}'}
+                                  {/* Icons */}
                                   <Link to="/user/:uid/website/:wid/page/:pid/widget/edit">
                                   <i classname="fas fa-cog" />
                                   </Link>   
                                   <i classname="fas fa-bars" />
                                   </i> 
-                                  <p></p>
+                                  <p>
                                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum odit autem, corrupti cupiditate nam
                                   optio fugit alias eaque quas? Perferendis nemo, aut iure blanditiis ipsam rerum necessitatibus enim
                                   praesentium delectus.
-                                  </i>
+                                  </p></i>
                                   </section></i>
                                   </i>
                                   <nav classname="navbar navbar-light bg-light fixed-bottom"></nav>

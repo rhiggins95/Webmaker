@@ -34,7 +34,7 @@ export default function PageNew() {
       </div>
       </form>
       </main>
-  <footer classname="navbar navbar-light bg-light fixed-bottom">
+  <footer classname="navbar navbar-dark bg-dark fixed-bottom">
     <span />
    <Link to="/user/:uid">
      <i classname="fas fa-user" />

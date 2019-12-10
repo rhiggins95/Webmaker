@@ -1,16 +1,19 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {Link, useParams } from "react-router-dom"
+
 export default function PageList() {
-    return (
+const params = useParams();
+
+  return (
     <div>
-  <nav classname="navbar bg-light navbar-light fixed-top">
+  <nav classname="navbar bg-dark navbar-dark fixed-top">
     <div>
-     <Link to="/user/:uid/website" classname="text-dark">
+     <Link to={`/user/${params.uid}/website`} classname="text-dark">
         <i classname="fas fa-chevron-left" />
       </Link>
       <span classname="navbar-brand mb-0 h1 m1-4">Pages</span>
     </div>
-   <Link to="/user/:uid/website/:wid/page/new" classname="text-dark">
+   <Link to={`/user/${params.uid}/website/${params.wid}:wid/page/new`} classname="text-dark">
       <i classname="fas fa-plus" />
     </Link>
   </nav>
@@ -51,9 +54,9 @@ export default function PageList() {
         </li>
         </ul>
       </main>
-      <footer classname="navbar navbar-light bg-light fixed-bottom">
+      <footer classname="navbar navbar-dark bg-light fixed-bottom">
       <span />
-    <Link to="/user/:uid" classname="text-dark">
+    <Link to={`/user/${params.uid}`} classname="text-dark">
       <i classname="fas fa-user" />
     </Link>
   </footer>

@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-export default function WebsitList() {
+export default function WebsiteList() {
     return (
        <div>
   <nav className="navbar .navbar-light bg-light fixed-top">
-    <a className="text-dark" to="/user/:uid">
+    <Link className="text-dark" to="/user/:uid">
       <i className="fas fa-chevron-left" />
-    </a>
+    </Link>
     <em><span className="navbar-brand mb-0 h1 font-style"> Websites</span></em>
     <Link className="text-dark" to="/user/:uid/website/new">
-      <i className="fas fa-shopping-bag" />
+      <i className="fas fa-plus" />
     </Link>
   </nav>
   <div className="text-center">
@@ -19,27 +19,27 @@ export default function WebsitList() {
   <div className="container">
     <ul className="list-group list-group-flush">
       <li className="list-group-item">
-        <Link to="/user/:uid/website/:wid/page">Address Book App</Link>
+        <Link to="/user/:uid/website/:wid/page">Facebook</Link>
         <Link className="float-right" to="/user/:uid/website/:wid">
-          <i className="fas fa-tshirt" />                        
+          <i className="fas fa-cog" />                        
         </Link>
       </li>
       <li className="list-group-item">
-        <Link to="/user/:uid/website/:wid/page">Blogger</Link>
+        <Link to="/user/:uid/website/:wid/page">Twitter</Link>
         <Link className="float-right" to="/user/:uid/website/:wid">
-          <i className="fas fa-tshirt" />                        
+          <i className="fas fa-cog" />                        
         </Link>
       </li>
       <li className="list-group-item">
-        <Link to="/user/:uid/website/:wid/page">Blogging App</Link>
+        <Link to="/user/:uid/website/:wid/page">Instagram</Link>
         <Link className="float-right" to="/user/:uid/website/:wid">
-          <i className="fas fa-tshirt" />                        
+          <i className="fas fa-cog" />                        
         </Link>
       </li>
       <li className="list-group-item">
-        <Link to="/user/:uid/website/:wid/page">Script Testing App</Link>
-        <Link to="/user/:uid/website/:wid" className="float-right">
-          <i className="fas fa-tshirt" />        
+        <Link to="/user/:uid/website/:wid/page">MSIMBO</Link>
+        <Link  className="float-right" to="/user/:uid/website/:wid">
+          <i className="fas fa-cog" />        
         </Link>    
       </li>
     </ul>
@@ -47,7 +47,7 @@ export default function WebsitList() {
   <nav className="navbar navbar-light bg-light fixed-bottom">
     <span />
     <Link className="text-dark" href="/user/:uid">
-        <i className="fab fa-apple-pay" />
+        <i className="fas fa-user" />
         </Link>
       </nav>
     </div>
