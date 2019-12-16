@@ -1,45 +1,68 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, {useState} from 'react';
+import { Link, useHistory, useParams } from "react-router-dom";
+import uuid from "uuid"
 
-export default function PageNew() {
+export default function PageNew(props) {
+ const history = useHistory();
+ const params = useParams();
+ 
+ const [name, setName] = useState("");
+ const [title, setTitle] = useState(""); 
+
+ const submit = e => {
+   e.preventDefault();
+ const newPage = {
+   _id: uuid.v4(),
+   name: name,
+   title: title,
+ websiteId: params.wid
+  };
+  
+  props.addPage(newPage);
+history.push(`/user/${params.uid}/website/${params.wid}/page`);  
+};
+ 
  return (
     <div>
-      <nav classname="navbar navbar-light bg-light fixed-top">
+      <nav className="navbar navbar-light bg-light fixed-top">
         <div>
-          <Link to="/user/:uid/website/:wid/page" classname="text-dark">
-            <i classname="fas fa-chevron-left" /></Link>
-      <span classname="navbar navbar-brand h1 m1-4 mb-0">New Page</span>
+          <Link to={`/user/${params.uid}/website/${params.wid}/page`} className="text-dark">
+            <i className="fas fa-chevron-left" /></Link>
+      <span className="navbar navbar-brand h1 m1-4 mb-0">New Page</span>
     </div>
-   <Link to="/user/:uid/website/:wid/page" classname="text-dark">
-      <i classname="fas fa-check" />
-    </Link>
+    <button className="text-dark btn" form="pageForm"><i className="fas fa-check" /> </button>
   </nav>
-  <main classname="container">
-    <form>
-      <div classname="form group">
+  <main className="container">
+    <form id="pageForm" onSubmit={submit}>
+      <div className="form group">
         <label htmlFor="name">Name</label>
         <input 
         type="text" 
-        classname="form-control" 
+        className="form-control" 
         placeholder="Enter page name..." 
-        id="name" />
+        id="name" 
+        value={name}
+        onChange={e=>setName(e.target.value)}/>
       </div>
-      <div classname="form-group">
+      <div className="form-group">
         <label htmlFor="title">Title</label>
         <input 
         type="text" 
-        classname="form-control" 
+        className="form-control" 
         placeholder="Enter page title..." 
-        id="title" />
+        id="title"
+        value={title}
+        onChange={e => setTitle(e.target.value)}
+        />
       </div>
       </form>
       </main>
-  <footer classname="navbar navbar-dark bg-dark fixed-bottom">
+  <span className="navbar navbar-light bg-light fixed-bottom">
     <span />
-   <Link to="/user/:uid">
-     <i classname="fas fa-user" />
+   <Link to={`/user/${params.uid}`}>
+     <i className="fas fa-user" />
      </Link>
-  </footer>
+  </span>
 </div>
-    )
-}
+    );
+ }

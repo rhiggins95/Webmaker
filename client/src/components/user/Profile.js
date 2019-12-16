@@ -5,7 +5,7 @@ export default function Profile() {
     return (
     <div>
   <div>
-    <nav className="navbar bg-primary navbar-dark fixed-top">
+    <nav className="navbar bg-primary navbar-dark">
       <span className="navbar-brand h1 mb-0">Profile</span>
       <i className="fas fa-check text-dark">
       </i></nav><i className="fas fa-check text-dark">
