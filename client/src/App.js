@@ -54,7 +54,7 @@ const [users, setUsers] =useState([
   password: "ronelle", 
   firstName: "ronelle", 
   lastName: "Higgins", 
-  email: "swang@ulem.org"
+  email: "ronellethiggins@gmail.com"
   }
 ]);
 const [websites, setWebsites] = useState([
@@ -166,7 +166,7 @@ const removePage = pid => {
 // update page
 const updatePage = newPage => {
   setPages(
-    websites.mao(page => {
+    pages.map(page => {
       if (page._ === newPage._) {
         return newPage;
       } else {
@@ -191,10 +191,8 @@ const updatePage = newPage => {
         updateWebsite={updateWebsite}
         />
         </Route>
-        <Route exact path="/user/:uid/website/:wid/page">
-        <PageList getPages={getPages}/>
-        </Route>
-        <Route exact path="/user/:uid/website/:wid/page/new"> <PageNew addPage={addPage} /></Route>
+        <Route exact path="/user/:uid/website/:wid/page" component={PageList} /> 
+        <Route exact path="/user/:uid/website/:wid/page/new" component={PageNew} />
         <Route exact path="/user/:uid/website/:wid/page/:pid">
           <PageEdit 
           getPage={getPage} 

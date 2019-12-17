@@ -1,66 +1,47 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {Link, useParams } from "react-router-dom"
 
-export default function PageList() {
+export default function PageList(props) {
 const params = useParams();
 
-  return (
+const [pages, setPages] = useState([]);
+  
+useEffect(()=> {
+  setPages(props.getPages(params.wid));
+}, [params.wid, props]);
+
+return (
     <div>
-  <nav classname="navbar bg-dark navbar-dark fixed-top">
+  <nav className="navbar bg-dark navbar-dark fixed-top">
     <div>
-     <Link to={`/user/${params.uid}/website`} classname="text-dark">
-        <i classname="fas fa-chevron-left" />
+     <Link to={`/user/${params.uid}/website`} className="text-dark">
+        <i className="fas fa-chevron-left" />
       </Link>
-      <span classname="navbar-brand mb-0 h1 m1-4">Pages</span>
+      <span className="navbar-brand mb-0 h1 m1-4">Pages</span>
     </div>
-   <Link to={`/user/${params.uid}/website/${params.wid}:wid/page/new`} classname="text-dark">
-      <i classname="fas fa-plus" />
+   <Link to={`/user/${params.uid}/website/${params.wid}/page/new`} className="text-dark">
+      <i className="fas fa-plus" />
     </Link>
   </nav>
-  <main classname="container">
-    <ul classname="list-group list-group-flush">
-      <li classname="list-group-item">
-       <Link to="/user/:uid/website/:wid/page/:pid/widget" >Blog Post</Link>
-       <Link to="/user/:uid/website/:wid/page/:pid" classname="float-right">
-          <i classname="fas fa-cog" />
-        </Link>
-      </li>
-      <li classname="list-group-item">
-       <Link to="/user/:uid/website/:wid/page/:pid/widget">Blogs</Link>
-       <Link to="/user/:uid/website/:wid/page/:pid" classname="float-right">
-          <i classname="fas fa-cog" />
-        </Link>
-      </li>
-      <li classname="list-group-item">
-       <Link to="/user/:uid/website/:wid/page/:pid/widget">Home</Link>
-       <Link to="/user/:uid/website/:wid/page/:pid" classname="float-right">
-          <i classname="fas fa-cog" />
-        </Link>
-      </li>
-      <li classname="list-group-item">
-       <Link to="/user/:uid/website/:wid/page/:pid/widget">About</Link>
-       <Link to="/user/:uid/website/:wid/page/:pid" classname="float-right">
-          <i classname="fas fa-cog" />
-        </Link>
-      </li>
-      <li classname="list-group-item">
-       <Link  to="/user/:uid/website/:wid/page/:pid/widget">
-         Contact Us</Link>
-       <Link 
-         to="/user/:uid/website/:wid/page/:pid" 
-         classname="float-right">
-        <i classname="fas fa-cog" />
-        </Link>
+  <main className="container">
+    <ul className="list-group list-group-flush">
+      {pages.map(page=> (
+        <li className="list-group-item" key={page._id}>
+          <Link to={`/user/${params.uid}/website/${params.wid}/page/${page._id}/widget`}>
+            {page.name}
+          </Link>
+          <Link to={`/user/${params.uid}/website/${params.wid}/page/${page._id}`} className="float-right"> <i className="fas fa-cog" /> </Link>
         </li>
+      ))}
         </ul>
       </main>
-      <footer classname="navbar navbar-dark bg-light fixed-bottom">
+      <footer className="navbar navbar-dark bg-light fixed-bottom">
       <span />
-    <Link to={`/user/${params.uid}`} classname="text-dark">
-      <i classname="fas fa-user" />
+    <Link to={`/user/${params.uid}`} className="text-dark">
+      <i className="fas fa-user" />
     </Link>
   </footer>
   </div>
 
-    )
+    );
 }
