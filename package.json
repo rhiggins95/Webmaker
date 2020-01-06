@@ -1,0 +1,32 @@
+{
+  "name": "webmaker4",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "client": "cd client && npm start",
+    "dev": "concurrently `npm run server` `npm run client` "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhiggins95/Webmaker4"
+  },
+  "author": "Ronelle Higgins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com.rhiggins95/web-maker-4"
+  },
+  "homepage": "https://github.com/rhiggins95/web-maker-4#readme",
+  "dependencies": {
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "mongodb": "^3.4.1",
+    "mongoose": "^5.8.3",
+    "nodemon": "^2.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.1"
+  }
+}

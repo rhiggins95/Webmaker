@@ -115,4 +115,4 @@ export default function Profile(props) {
       </nav>
     </div>
   );
-  }
+}

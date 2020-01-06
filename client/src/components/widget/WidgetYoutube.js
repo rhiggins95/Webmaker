@@ -1,4 +1,3 @@
-  
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -31,7 +30,7 @@ export default function WidgetYouTube(props) {
               id="name"
               placeholder="Enter widget name..."
               name="name"
-              value={props.widget.name?props.widget.name: ""}
+              value={props.widget.name ? props.widget.name : ""}
               onChange={props.onChange}
             />
           </div>
@@ -43,7 +42,7 @@ export default function WidgetYouTube(props) {
               id="text"
               placeholder="Enter Widget text..."
               name="text"
-              value={props.widget.text?props.widget.text: ""}
+              value={props.widget.text ? props.widget.text : ""}
               onChange={props.onChange}
             />
           </div>
@@ -55,7 +54,7 @@ export default function WidgetYouTube(props) {
               id="url"
               placeholder="Enter image address..."
               name="url"
-              value={props.widget.url?props.widget.url: ""}
+              value={props.widget.url ? props.widget.url : ""}
               onChange={props.onChange}
             />
           </div>
@@ -68,7 +67,7 @@ export default function WidgetYouTube(props) {
               max={100}
               id="width"
               name="width"
-              value={props.widget.width?props.widget.width: "100%"}
+              value={props.widget.width ? props.widget.width : "100%"}
               onChange={props.onChange}
             />
           </div>
