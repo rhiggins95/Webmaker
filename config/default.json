@@ -1,3 +1,9 @@
 {
-  "mongo": "mongodb://localhost:27017/webmaker4"
+  "mongo": "mongodb://localhost:27017/webmaker4",
+  "mysql": {
+    "host": "localhost",
+    "user": "root",
+    "password": "student",
+    "database": "web_maker"
+  }
 }
