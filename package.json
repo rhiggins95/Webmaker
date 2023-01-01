@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/rhiggins95/web-maker-4#readme",
   "dependencies": {
-    "config": "^3.2.4",
+    "config": "^3.3.8",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.4.1",
